@@ -1,8 +1,11 @@
 <ActionBar class="action-bar">
-    <Label class="action-bar-title" text="My Home"></Label>
+    <Label class="action-bar-title" text="BITPLEI"></Label>
 </ActionBar>
 
-<GridLayout class="page">
-    <!-- Add your page content here -->
-    <Label text="Hello World"></Label>
-</GridLayout>
+<StackLayout class="page" orientation="vertical">
+    <Label text="{{ message }}" class="stn"></Label>
+
+    <TextField #idNumberPhone hint="Number Phone..." keyboardType="number" autocorrect="false" class="stn"></TextField>
+
+    <Button text="Verificar" (tap)="onButtonTap(idNumberPhone.text)" class="stn"></Button>
+</StackLayout>
