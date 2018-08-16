@@ -1,0 +1,23 @@
+GridLayout{
+    background-color: cornflowerblue;
+}
+
+StackLayout {
+    background-color: darkorange;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+Label{
+    font-family: "Comic Sans MS";
+}
+
+TextField {
+    /*border-color: blueviolet;
+    border-width: 2px;*/
+}
+
+Button {
+    background-color: azure;
+}

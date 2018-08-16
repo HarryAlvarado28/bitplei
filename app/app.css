@@ -27,19 +27,3 @@ components that have the btn class name.
 .action-bar{
     background-color: darkviolet;
 }
-
-StackLayout {
-    text-align: center;
-
-    margin: 10px;
-    padding: 10px;
-}
-
-TextField {
-    /*border-color: blueviolet;
-    border-width: 2px;*/
-}
-
-Button {
-    background-color: azure;
-}

@@ -2,10 +2,13 @@
     <Label class="action-bar-title" text="BITPLEI"></Label>
 </ActionBar>
 
-<StackLayout class="page" orientation="vertical">
-    <Label text="{{ message }}" class="stn"></Label>
-
-    <TextField #idNumberPhone hint="Number Phone..." keyboardType="number" autocorrect="false" class="stn"></TextField>
-
-    <Button text="Verificar" (tap)="onButtonTap(idNumberPhone.text)" class="stn"></Button>
-</StackLayout>
+<GridLayout rows="auto, auto, auto">
+    <StackLayout row="0" *ngIf="!enviado">
+        <TextField #idNumberPhone hint="Number Phone..." keyboardType="number" autocorrect="false" class="stn"></TextField>
+        <Button text="Enviar" (tap)="onBEnviar(idNumberPhone.text)" class="stn"></Button>
+    </StackLayout>
+    <StackLayout row="1" *ngIf="enviado">
+        <TextField #idCodeCheck hint="Codigo..." keyboardType="number" autocorrect="false" class="stn"></TextField>
+        <Button text=Verificar (tap)="onBCheck(idCodeCheck.text)" class="stn"></Button>
+    </StackLayout>
+</GridLayout>

@@ -1,17 +1,14 @@
 import { Component, OnInit } from "@angular/core";
-import { TextField } from "ui/text-field";
-
 
 @Component({
     selector: "BITPLEI",
     moduleId: module.id,
-    templateUrl: "./home.component.html"
+    templateUrl: "./home.component.html",
+    styleUrls: ["./home.component.css"]
 })
 
 export class HomeComponent implements OnInit {
-    // Texto se imprime en el label del archivo html.
-    public message: string = "Bienvenido!";
-
+    enviado = false;
     constructor() {
         // Use the component constructor to inject providers.
     }
@@ -21,10 +18,24 @@ export class HomeComponent implements OnInit {
 
     }
 
-    public onButtonTap(args) {
-        console.log('Q Xopaaaaaaaaa Button tapped', args);
-        alert("valor introducido:: "+args)
+    public onBEnviar(args) {
+        console.log('Q Xopaaaaaaaaa onBEnviar', args);
+        if(args=="bueno"){
+            console.log("Es bueno :: ",args);
+            this.enviado = !this.enviado;
+        }else{
+            console.log("Es cualquier otra cosa: ",args);
+        }
     }
 
+    public onBCheck(args){
+        console.log("Q Xopaaaaaaaaa onBCheck :",args);
+        if(args=="2828"){
+            console.log("Es bueno :: ",args);
+            this.enviado = !this.enviado;
+        }else{
+            console.log("Es cualquier otra cosa: ",args);
+        }
+    }
 }
 
